@@ -1,85 +1,85 @@
 {
-	"app-id": "com.steamgriddb.steam-rom-manager",
-	"default-branch": "stable",
-	"runtime": "org.freedesktop.Sdk",
-	"runtime-version": "21.08",
-	"sdk": "org.freedesktop.Sdk",
-	"base": "org.electronjs.Electron2.BaseApp",
-	"base-version": "21.08",
-	"command": "steam-rom-manager",
-	"rename-icon": "steam-rom-manager",
-	"separate-locales": false,
-	"finish-args": [
-		"--share=ipc",
-		"--socket=x11",
-		"--socket=pulseaudio",
-		"--share=network",
-		"--device=all",
-		"--filesystem=host",
-		"--env=IN_FLATPAK=1"
-	],
-	"cleanup": [
-		"/include",
-		"/lib/pkgconfig",
-		"/share/gtk-doc",
-		"*.la"
-	],
-	"modules": [
-		{
-			"name": "zypak",
-			"sources": [
-				{
-					"type": "git",
-					"url": "https://github.com/refi64/zypak",
-					"tag": "v2022.03",
-					"commit": "8424c6bcf909ca2031ebc6537d324bb64772266e"
-				}
-			]
-		},
-		{
-			"name": "steam-rom-manager",
-			"buildsystem": "simple",
-			"build-commands": [
-				"install -D run.sh /app/bin/steam-rom-manager",
-				"cp /usr/bin/ar /app/bin",
-				"ar x srm.deb",
-				"tar xf data.tar.xz",
-				"mv \"opt/Steam ROM Manager\" \"/app/srm\"",
-				"rm -rf \"usr/share/icons/hicolor/1024x1024\"",
-				"cd usr; find share/icons/hicolor -type f -exec install -Dm644 \"{}\" \"/app/{}\" \\;",
-				"install -Dm644 com.steamgriddb.steam-rom-manager.metainfo.xml -t /app/share/metainfo",
-				"install -Dm644 com.steamgriddb.steam-rom-manager.desktop -t /app/share/applications",
-				"rm -r srm.deb control.tar.* data.tar.xz debian-binary usr opt"
-			],
-			"sources": [
-				{
-					"type": "script",
-					"dest-filename": "run.sh",
-					"commands": [
-						"/app/bin/zypak-wrapper.sh /app/srm/steam-rom-manager"
-					]
-				},
-				{
-					"type": "file",
-					"path": "com.steamgriddb.steam-rom-manager.metainfo.xml"
-				},
-				{
-					"type": "file",
-					"path": "com.steamgriddb.steam-rom-manager.desktop"
-				},
-				{
-					"type": "file",
-					"dest-filename": "srm.deb",
-					"url": "https://github.com/SteamGridDB/steam-rom-manager/releases/download/v2.3.30/steam-rom-manager_2.3.30_amd64.deb",
-					"sha256": "44fe72a0d506b2c486f1dcbe09461a86c6524a432d737561f5b84787813b1cca",
-					"x-checker-data": {
-						"type": "json",
-						"url": "https://api.github.com/repos/SteamGridDB/steam-rom-manager/releases/latest",
-						"url-query": ".assets[] | select(.name==\"steam-rom-manager_\" + $version + \"_amd64.deb\") | .browser_download_url",
-						"version-query": ".tag_name | sub(\"^v\"; \"\")"
-					}
-				}
-			]
-		}
-	]
+    "app-id": "com.steamgriddb.steam-rom-manager",
+    "default-branch": "stable",
+    "runtime": "org.freedesktop.Sdk",
+    "runtime-version": "21.08",
+    "sdk": "org.freedesktop.Sdk",
+    "base": "org.electronjs.Electron2.BaseApp",
+    "base-version": "21.08",
+    "command": "steam-rom-manager",
+    "rename-icon": "steam-rom-manager",
+    "separate-locales": false,
+    "finish-args": [
+        "--share=ipc",
+        "--socket=x11",
+        "--socket=pulseaudio",
+        "--share=network",
+        "--device=all",
+        "--filesystem=host",
+        "--env=IN_FLATPAK=1"
+    ],
+    "cleanup": [
+        "/include",
+        "/lib/pkgconfig",
+        "/share/gtk-doc",
+        "*.la"
+    ],
+    "modules": [
+        {
+            "name": "zypak",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/refi64/zypak",
+                    "tag": "v2022.03",
+                    "commit": "8424c6bcf909ca2031ebc6537d324bb64772266e"
+                }
+            ]
+        },
+        {
+            "name": "steam-rom-manager",
+            "buildsystem": "simple",
+            "build-commands": [
+                "install -D run.sh /app/bin/steam-rom-manager",
+                "cp /usr/bin/ar /app/bin",
+                "ar x srm.deb",
+                "tar xf data.tar.xz",
+                "mv \"opt/Steam ROM Manager\" \"/app/srm\"",
+                "rm -rf \"usr/share/icons/hicolor/1024x1024\"",
+                "cd usr; find share/icons/hicolor -type f -exec install -Dm644 \"{}\" \"/app/{}\" \\;",
+                "install -Dm644 com.steamgriddb.steam-rom-manager.metainfo.xml -t /app/share/metainfo",
+                "install -Dm644 com.steamgriddb.steam-rom-manager.desktop -t /app/share/applications",
+                "rm -r srm.deb control.tar.* data.tar.xz debian-binary usr opt"
+            ],
+            "sources": [
+                {
+                    "type": "script",
+                    "dest-filename": "run.sh",
+                    "commands": [
+                        "/app/bin/zypak-wrapper.sh /app/srm/steam-rom-manager"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "path": "com.steamgriddb.steam-rom-manager.metainfo.xml"
+                },
+                {
+                    "type": "file",
+                    "path": "com.steamgriddb.steam-rom-manager.desktop"
+                },
+                {
+                    "type": "file",
+                    "dest-filename": "srm.deb",
+                    "url": "https://github.com/SteamGridDB/steam-rom-manager/releases/download/v2.3.31/steam-rom-manager_2.3.31_amd64.deb",
+                    "sha256": "d9dba8644b87c45ef9e86fc566dd1a2f5af5ef2f68faff4ab838021e361f0cda",
+                    "x-checker-data": {
+                        "type": "json",
+                        "url": "https://api.github.com/repos/SteamGridDB/steam-rom-manager/releases/latest",
+                        "url-query": ".assets[] | select(.name==\"steam-rom-manager_\" + $version + \"_amd64.deb\") | .browser_download_url",
+                        "version-query": ".tag_name | sub(\"^v\"; \"\")"
+                    }
+                }
+            ]
+        }
+    ]
 }
