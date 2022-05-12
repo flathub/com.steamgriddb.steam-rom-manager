@@ -70,8 +70,8 @@
                 {
                     "type": "file",
                     "dest-filename": "srm.deb",
-                    "url": "https://github.com/SteamGridDB/steam-rom-manager/releases/download/v2.3.35/steam-rom-manager_2.3.35_amd64.deb",
-                    "sha256": "0c4f089c427f3ef0b8ad724d309264aeac397d2238f9f4ae6f5e8281692f2c26",
+                    "url": "https://github.com/SteamGridDB/steam-rom-manager/releases/download/v2.3.36/steam-rom-manager_2.3.36_amd64.deb",
+                    "sha256": "0a29b92234a6c7c8dcbbc0a133b34cc9bd082b86b83b33be98062f8e38ca37e8",
                     "x-checker-data": {
                         "type": "json",
                         "url": "https://api.github.com/repos/SteamGridDB/steam-rom-manager/releases/latest",
