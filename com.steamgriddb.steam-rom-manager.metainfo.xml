@@ -21,6 +21,7 @@
   <url type="homepage">https://steamgriddb.github.io/steam-rom-manager</url>
   <url type="donation">https://www.patreon.com/steamgriddb</url>
   <releases>
+    <release version="2.3.39" date="2022-06-07"/>
     <release version="2.3.38" date="2022-05-22"/>
     <release version="2.3.37" date="2022-05-16"/>
     <release version="2.3.36" date="2022-05-12"/>
