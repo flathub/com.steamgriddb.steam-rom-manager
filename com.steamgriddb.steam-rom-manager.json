@@ -56,7 +56,7 @@
                     "type": "script",
                     "dest-filename": "run.sh",
                     "commands": [
-                        "/app/bin/zypak-wrapper.sh /app/srm/steam-rom-manager"
+                        "/app/bin/zypak-wrapper.sh /app/srm/steam-rom-manager $@"
                     ]
                 },
                 {
