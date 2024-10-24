@@ -4,11 +4,9 @@
   <launchable type="desktop-id">com.steamgriddb.steam-rom-manager.desktop</launchable>
   <name>Steam ROM Manager</name>
   <developer_name>SteamGridDB</developer_name>
-  <summary>An app for managing ROMs in Steam</summary>
+  <summary>Bulk game importer and artwork manager for Steam!</summary>
   <description>
-    <p>
-			Steam ROM Manager is a super flexible tool for adding non-Steam games to steam in bulk and managing their artwork assets. Added games could be ROMs for emulators, games from other stores such as Epic or GOG, or even not games at all. Have you always wanted your notes from junior year as a category in steam? If so that's pretty weird! But now it's possible.
-		</p>
+    <p>Steam ROM Manager is a super flexible tool for adding non-Steam games to steam in bulk and managing their artwork assets. Added games could be ROMs for emulators, games from other stores such as Epic or GOG, or even not games at all.</p>
   </description>
   <screenshots>
     <screenshot type="default">
@@ -20,6 +18,10 @@
   <content_rating type="oars-1.0"/>
   <url type="homepage">https://steamgriddb.github.io/steam-rom-manager</url>
   <url type="donation">https://www.patreon.com/steamgriddb</url>
+  <branding>
+    <color type="primary" scheme_preference="light">#2b5180</color>
+    <color type="primary" scheme_preference="dark">#5fb4f0</color>
+  </branding>
   <releases>
     <release version="2.5.26" date="2024-10-24">
       <description></description>
