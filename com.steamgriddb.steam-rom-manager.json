@@ -2,10 +2,10 @@
     "app-id": "com.steamgriddb.steam-rom-manager",
     "default-branch": "stable",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "22.08",
+    "runtime-version": "24.08",
     "sdk": "org.freedesktop.Sdk",
     "base": "org.electronjs.Electron2.BaseApp",
-    "base-version": "22.08",
+    "base-version": "24.08",
     "command": "steam-rom-manager",
     "rename-icon": "steam-rom-manager",
     "separate-locales": false,
@@ -26,21 +26,11 @@
     ],
     "modules": [
         {
-            "name": "zypak",
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://github.com/refi64/zypak",
-                    "tag": "v2022.03",
-                    "commit": "8424c6bcf909ca2031ebc6537d324bb64772266e"
-                }
-            ]
-        },
-        {
             "name": "steam-rom-manager",
             "buildsystem": "simple",
             "build-commands": [
                 "install -D run.sh /app/bin/steam-rom-manager",
+                "cp -a /usr/lib/$(gcc --print-multiarch)/libsframe.so* ${FLATPAK_DEST}/lib",
                 "cp /usr/bin/ar /app/bin",
                 "ar x srm.deb",
                 "tar xf data.tar.xz",
