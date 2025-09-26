@@ -15,7 +15,8 @@
         "--socket=pulseaudio",
         "--share=network",
         "--device=all",
-        "--filesystem=host",
+        "--filesystem=~/.var/app/com.valvesoftware.Steam/.steam/steam",
+        "--filesystem=~/.steam/steam",
         "--env=IN_FLATPAK=1"
     ],
     "cleanup": [
