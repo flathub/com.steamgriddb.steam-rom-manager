@@ -23,8 +23,11 @@
     <color type="primary" scheme_preference="dark">#5fb4f0</color>
   </branding>
   <releases>
-    <release version="2.5.38" date="2026-07-05">
+    <release version="2.5.40" date="2026-07-06">
       <description></description>
+    </release>
+    <release version="2.5.38" date="2026-07-05">
+      <description/>
     </release>
     <release version="2.5.37" date="2026-07-03">
       <description/>
